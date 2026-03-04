@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-gold-100: #FCF6BA;
+  --color-gold-200: #FBF5B7;
+  --color-gold-300: #EAD07D;
+  --color-gold-400: #D4AF37;
+  --color-gold-500: #BF953F;
+  --color-gold-600: #B38728;
+  --color-gold-700: #AA771C;
+  
+  --color-rose-gold: #B76E79;
+  --color-soft-pink: #F8C8DC;
+  --color-vibrant-pink: #FF007F;
+  --color-lavender: #E6E6FA;
+  
+  --color-rich-black: #050505;
+  --color-charcoal: #111111;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+.text-gradient-vibrant {
+  background: linear-gradient(to right, #FF007F, #F8C8DC, #B76E79, #E6E6FA, #FF007F);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 5s linear infinite;
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 50%, #AA771C 100%);
+}
+
+.bg-gradient-vibrant {
+  background: linear-gradient(135deg, #FF007F 0%, #F8C8DC 50%, #B76E79 100%);
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.border-gradient-gold {
+  border-image: linear-gradient(to right, #BF953F, #FCF6BA, #AA771C) 1;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
